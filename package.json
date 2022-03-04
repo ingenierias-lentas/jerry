@@ -1,0 +1,51 @@
+{
+  "main": "./lib/jerry.js",
+  "bin": {
+    "jerry": "lib/jerry.js"
+  },
+  "scripts": {
+    "start": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/jerry.ts",
+    "create": "npm run build && npm run test",
+    "build": "tsc -p .",
+    "local": "sudo npm i -g && jerry",
+    "refresh": "rm -rf ./node_modules ./package-lock.json && npm install"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "clear": "^0.1.0",
+    "commander": "^9.0.0",
+    "figlet": "^1.5.2",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "@types/clear": "^0.1.2",
+    "@types/commander": "^2.12.2",
+    "@types/figlet": "^1.5.4",
+    "@types/node": "^17.0.19",
+    "nodemon": "^2.0.15",
+    "ts-node": "^10.5.0",
+    "typescript": "^4.5.5"
+  },
+  "name": "jerry",
+  "description": "jerry-rigging SCORE contracts for ICON development",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ingenierias-lentas/jerry.git"
+  },
+  "keywords": [
+    "cli",
+    "icon",
+    "score",
+    "blockchain",
+    "smart-contract",
+    "java",
+    "javascript"
+  ],
+  "author": "Eric Solomon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ingenierias-lentas/jerry/issues"
+  },
+  "homepage": "https://github.com/ingenierias-lentas/jerry#readme"
+}
